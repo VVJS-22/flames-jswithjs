@@ -11,7 +11,8 @@ main {
     min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 2.5rem;
     align-items: center;
 }
 
@@ -24,16 +25,9 @@ main {
 }
 
 input[type="text"], button {
-    font-size: 0.6rem;
     padding: 0.25rem 0.5rem;
 }
 
 #resultDiv {
     margin: 1rem;
-}
-
-@media screen and (min-height: 200px) {
-    html, body {
-        overflow-y: hidden;
-    }
 }
