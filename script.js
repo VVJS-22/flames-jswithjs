@@ -39,7 +39,7 @@ const getRemainder = (splitName, name) => {
     console.log(splitName, name)
 
     splitName.map(item => {
-        const regex = new RegExp(`[${item}]`,"i")
+        const regex = new RegExp(`${item}`,"i")
         name = name.replace(regex, "")
         console.log(name)
     })
