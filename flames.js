@@ -1,11 +1,11 @@
-let boyName = "ajith" //ajt
+let boyName = "ajithkumar" //ajt
 let girlName = "shalini" //slni
 
 
 console.log(boyName, girlName)
 
 
-// let sampleRegex = /a/i
+let sampleRegex = /a/i
 // girlName = girlName.replace(sampleRegex, "")
 
 // sampleRegex = /j/i
@@ -34,6 +34,8 @@ console.log(arrayBoy, arrayGirl)
 
 const remainderG = arrayBoy.map(item => {
     const regex2 = new RegExp(`${item}`,"i")
+    
+    console.log(regex2)
     girlName = girlName.replace(regex2, "")
     return girlName
 })
@@ -43,43 +45,46 @@ const remainderGname = remainderG.pop()
 console.log(remainderGname)
 
 
-// const remainderB = arrayGirl.map(item => {
-//     const regex1 = new RegExp(`[${item}]`,"i")
-//     boyName = boyName.replace(regex1, "")
-//     return boyName
-// })
+const remainderB = arrayGirl.map(item => {
+    const regex1 = new RegExp(`${item}`,"i")
+    boyName = boyName.replace(regex1, "")
+    return boyName
+})
 
-// const remainderBname = remainderB.pop()
+const remainderBname = remainderB.pop()
 
-// console.log(remainderGname,remainderBname)
+console.log(remainderGname,remainderBname)
 
-// totalCount = (remainderBname+remainderGname).length
+totalCount = (remainderBname+remainderGname).length
 
-// console.log(totalCount)
+console.log(totalCount)
 
+//=====================================================
 
-// let flames = ["Friend", "Lover", "Attraction", "Marriage", "Enemy", "Sister"]
+//Part 2
 
-// console.log(flames)
+let flames = ["Friend", "Lover", "Attraction", "Marriage", "Enemy", "Sister"]
+
+console.log(flames)
 
 // const removalIndex = (totalCount-1)%6
 
 // console.log(removalIndex)
 
-// let i
 
-// for (i = 6; i > 1; i--) {
-//     flames.splice((totalCount-1)%i,1)
-//     console.log(flames)
-//     console.log((totalCount-1)%i, flames.length-1)
 
-//     if ((totalCount-1)%i < flames.length-1 || (totalCount-1)%i != 0) {
-//         flamesPart = flames.splice((totalCount-1)%i,)
-//         console.log(flames)
-//         flames = [...flamesPart,...flames]
-//         console.log(flames)
-//     }
-// }
+for (let i = 6; i > 1; i--) {
+    flames.splice((totalCount-1)%i,1)
+    console.log(flames)
+    console.log((totalCount-1)%i, flames.length-1)
+
+    if ((totalCount-1)%i < flames.length-1 || (totalCount-1)%i != 0) {
+        flamesPart = flames.splice((totalCount-1)%i,)
+        console.log(flames)
+        flames = [...flamesPart,...flames]
+        console.log(flames)
+    }
+}
 
 // flames.splice((totalCount-1)%6,1)
 // console.log(flames)
@@ -87,17 +92,18 @@ console.log(remainderGname)
 
 // if ((totalCount-1)%6 < flames.length-1 || (totalCount-1)%6 != 0) {
 //     flamesPart = flames.splice((totalCount-1)%6,)
+//     console.log(flamesPart)
 //     console.log(flames)
 //     flames = [...flamesPart,...flames]
 //     console.log(flames)
 // }
 
 
-// //======================================================================================
+// // //======================================================================================
 
-// //totalCount-1%6 > length , no need to rearrrange || totalCount-1%6 == 0 , no need to rearrange
+// // //totalCount-1%6 > length , no need to rearrrange || totalCount-1%6 == 0 , no need to rearrange
 
-// //=======================================================================================
+// // //=======================================================================================
 
 
 // flames.splice((totalCount-1)%5,1)
@@ -110,10 +116,10 @@ console.log(remainderGname)
 //     console.log(flames)
 // }
 
-// // flamesPart = flames.splice(removalIndex,)
-// // console.log(flames)
-// // flames = [...flamesPart,...flames]
-// // console.log(flames)
+// // // flamesPart = flames.splice(removalIndex,)
+// // // console.log(flames)
+// // // flames = [...flamesPart,...flames]
+// // // console.log(flames)
 
 
 

@@ -12,6 +12,7 @@ const flamesCalc = () => {
     console.log(yourName, partnerName)
 
     const splitArray = splitNames(yourName, partnerName)
+    console.log(splitArray)
     const yourRemainder = getRemainder(splitArray[1], yourName)
     const partnerRemainder = getRemainder(splitArray[0],partnerName)
     const setCount = getCount(yourRemainder, partnerRemainder)
@@ -29,8 +30,7 @@ const splitNames = (yourName, partnerName) => {
         const splitYourName = yourName.split("")
         const splitPartnerName = partnerName.split("")
 
-        console.log([splitYourName, splitPartnerName])
-        resultDiv.innerHTML = ""
+        // resultDiv.innerHTML = ""
         return [splitYourName, splitPartnerName]
     }
 }
